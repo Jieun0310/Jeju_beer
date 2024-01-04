@@ -22,23 +22,7 @@
     <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   </head>
   <body>
-    <header>
-      <ul class="h_left">
-        <li><a href="#">OUR BEER</a></li>
-        <li><a href="#">2023 THE BARREL SERIES</a></li>
-        <li><a href="#">SHOP</a></li>
-        <li>
-          <a href="#"><img src="../images/logo.jpg" alt="logo" /></a>
-        </li>
-        <li><a href="#">BREWERY</a></li>
-        <li><a href="#">CLUB NOUVEAL</a></li>
-      </ul>
-      <div class="h_right">
-        <a href="#" class="join">JOIN</a>
-        <a href="#" class="login">LOGIN</a>
-        <a href="#"><img src="../images/main/cart.png" alt="cart" /></a>
-      </div>
-    </header>
+    <header></header>
 
     <section class="ad1">
       <h1>제주의 <span>신선함</span>을 담다<br />제주 위트 에일</h1>
@@ -195,54 +179,13 @@
       </div>
     </div>
 
-    <footer class="content">
-      <img class="f_img" src="../images/main/footer_img.png" alt="footer_img" />
-
-      <div class="f_right">
-        <ul class="f_nav">
-          <li><a href="#">ABOUT US</a></li>
-          <li><a href="#">OUR BEERS</a></li>
-          <li><a href="#">NEWS</a></li>
-          <li><a href="#">CONTACT</a></li>
-          <li><a href="#">IR</a></li>
-          <li><a href="#">이용약관</a></li>
-          <li><a href="#">개인정보 처리방침</a></li>
-        </ul>
-
-        <p><span>제주맥주 주식회사 </span><span>대표이사 문혁기</span></p>
-        <p class="address">
-          본사) 제주특별자치도 제주시 한림읍 금능농공길 62-11 서울사무실)
-          서울특별시 중구 동호로 228 동호 38빌딩 6층<br />
-          호스팅 제공자 (주)아임웹 사업자등록번호 616-86-27415
-          통신판매업신고번호 제 2020-제주한림-0101 호
-        </p>
-
-        <p>고객센터 02-2235-5559, jejubeer@jejubeer.co.kr</p>
-        <div class="caution">
-          경고 : 지나친 음주는 뇌졸중, 기억력 손상이나 치매를 유발합니다. 임신
-          중 음주는 기형아 출생 위험을 높입니다.
-        </div>
-        <div class="copyright">COPYRIGHT 2021@ JEJU BEER COMPANY</div>
-      </div>
-
-      <ul class="sns">
-        <li>
-          <a href="#"><img src="../images/main/youtube.png" alt="youtube" /></a>
-        </li>
-        <li>
-          <a href="#"
-            ><img src="../images/main/facebook.png" alt="facebook"
-          /></a>
-        </li>
-        <li>
-          <a href="#"><img src="../images/main/insta.png" alt="insta" /></a>
-        </li>
-        <li>
-          <a href="#"><img src="../images/main/naver.png" alt="naver" /></a>
-        </li>
-      </ul>
-    </footer>
+    <footer class="content"></footer>
   </body>
+
+  <script>
+    $('header').load('../inc/header.html');
+    $('footer').load('../inc/footer.html');
+  </script>
 
   <script>
     $('.ad2_illuste').hover(
