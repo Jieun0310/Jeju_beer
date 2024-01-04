@@ -3,14 +3,14 @@
   margin: 0 auto;
   justify-content: space-evenly;
   align-items: center;
-  height: 450px;
+  height: 480px;
   backdrop-filter: blur(2px);
 }
 
 .banner_bgc {
   width: 100%;
-  height: 450px;
-  background-image: url(../images/jejudo.jpg);
+  height: 480px;
+  background-image: url(../images/jejudo3.jpg);
   background-blend-mode: difference;
   background-position: center;
   background-repeat: no-repeat;
@@ -25,21 +25,21 @@
   font-size: 36px;
 }
 .title p {
-  font-size: 16px;
+  font-size: 14px;
   padding-top: 10px;
 }
 
 .beers img {
   position: absolute;
   display: block;
-  width: 140px;
-  height: 210px;
+  width: 160px;
+  height: 240px;
   object-fit: cover;
 }
 
 .beer_item {
-  width: 140px;
-  height: 210px;
+  width: 160px;
+  height: 240px;
 }
 
 .beers {
@@ -50,8 +50,8 @@
 
 .beers li {
   position: relative;
-  width: 140px;
-  height: 210px;
+  width: 160px;
+  height: 240px;
 }
 
 .beer img:last-child {
@@ -71,11 +71,13 @@
 .beers li .beer img:last-child {
   opacity: 0;
   border-radius: 100px;
+  border: 2px solid #fff;
 }
 
 .beers li:hover .beer img:last-child {
   opacity: 1;
   border-radius: 100px;
+  border: 2px solid #fff;
 }
 
 .product {
