@@ -1,15 +1,24 @@
 .banner {
-  width: 100%;
-  height: 360px;
-  background-color: #ffa99e;
   display: flex;
   margin: 0 auto;
   justify-content: space-evenly;
   align-items: center;
+  height: 450px;
+  backdrop-filter: blur(2px);
+}
+
+.banner_bgc {
+  width: 100%;
+  height: 450px;
+  background-image: url(../images/jejudo.jpg);
+  background-blend-mode: difference;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .title {
-  color: #333;
+  color: #111;
 }
 
 .title h1 {
@@ -61,10 +70,12 @@
 
 .beers li .beer img:last-child {
   opacity: 0;
+  border-radius: 100px;
 }
 
 .beers li:hover .beer img:last-child {
   opacity: 1;
+  border-radius: 100px;
 }
 
 .product {
