@@ -129,11 +129,12 @@ header {
 .buy_btn {
   display: block;
   width: 130px;
-  height: 44px;
-  line-height: 44px;
+  height: 40x;
+  line-height: 40px;
   text-align: center;
   border: 1px solid #f88160;
   border-radius: 100px;
+  font-size: 14px;
 }
 
 .buy_btn:hover {
