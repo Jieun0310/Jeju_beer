@@ -18,6 +18,12 @@
 
 .title {
   color: #111;
+  align-items: center;
+}
+
+.title span{
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .title h1 {
@@ -36,10 +42,6 @@
   object-fit: cover;
 }
 
-.beer_item {
-  width: 160px;
-  height: 240px;
-}
 
 .beers {
   display: flex;
@@ -53,63 +55,57 @@
   height: 240px;
 }
 
-.beer img:last-child {
-  opacity: 0;
-  transition: all 0.2s;
-}
-
-.beers li .beer img:first-child {
-  opacity: 1;
-}
-
-.beers li:hover .beer img:first-child {
-  opacity: 0;
-  transition: all 0.2s;
-}
-
-.beers li .beer img:last-child {
-  opacity: 0;
-  border-radius: 100px;
-  border: 2px solid #fff;
-}
-
-.beers li:hover .beer img:last-child {
-  opacity: 1;
-  border-radius: 100px;
-  border: 2px solid #fff;
-}
 
 .product {
   display: flex;
   gap: 40px;
   align-items: center;
+  justify-content: space-evenly;
   margin: 40px auto;
   width: 1400px;
 }
+
 .lager {
+  position: relative;
   margin-bottom: 200px;
+  justify-content: center;
+  gap: 100px;
 }
 
-.lager > .banner02 img {
-  /* display: block;
-  width: 460px; */
-  object-fit: contain;
+.banner_lager {
+  margin-right: 220px;
+  justify-content: center;
 }
+
+.banner_lager img {
+ position: absolute;
+ top: 0;
+ left:80px ;
+  display: block;
+  width: 360px;
+  object-fit: contain;
+
+}
+
 
 .product .banner02 {
   padding-right: 100px;
+  width: 492px;
+  height: 300px;
 }
 
 .banner02 img {
   width: 492px;
   height: 300px;
+  object-fit: contain;
 }
 
 .jeju_item {
-  width: 200px;
 }
 
 .jeju_item img {
+  width: 160px;
+  object-fit: cover;
   display: block;
   margin: 0 auto;
 }
