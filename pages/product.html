@@ -395,7 +395,32 @@
     </div>
 
     <footer class="content"></footer>
+
+    <a href="#x" class="gotop"><i class="xi-angle-up"></i></a>
   </body>
+
+  <script>
+    $('a').attr('href', './product.html');
+    $('a.gotop').attr('href', '');
+  </script>
+
+  <script>
+    // gotop
+    $(window).scroll(function () {
+      var scrollValue = $(document).scrollTop();
+
+      if (scrollValue > 300) {
+        $('.gotop').fadeIn();
+      } else {
+        $('.gotop').fadeOut();
+      }
+    });
+
+    $('.gotop').on('click', function () {
+      $('html,body').animate({ scrollTop: 0 });
+    });
+  </script>
+
   <script>
     $('header').load('../inc/header.html');
     $('footer').load('../inc/footer.html');

@@ -6,7 +6,10 @@
     <title>shop page</title>
     <link rel="stylesheet" href="../css/common.css" />
     <link rel="stylesheet" href="../css/shop.css" />
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"
+    />
     <link
       rel="stylesheet"
       href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
@@ -16,7 +19,6 @@
       href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
     />
 
-    
     <!-- jquert cdn -->
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <!-- slick -->
@@ -32,33 +34,30 @@
         </div>
         <ul class="beers">
           <li>
-              <div class="beer">
-                <img
-                  src="../images/main/제주위트에일500.png"
-                  alt="제주위트에일500"
-                />
-              </div>
+            <div class="beer">
+              <img
+                src="../images/main/제주위트에일500.png"
+                alt="제주위트에일500"
+              />
+            </div>
           </li>
           <li>
-              <div class="beer">
-                <img
-                  src="../images/제주펠롱에일500 1.png"
-                  alt="제주펠롱에일500"
-                />
-              </div>
+            <div class="beer">
+              <img
+                src="../images/제주펠롱에일500 1.png"
+                alt="제주펠롱에일500"
+              />
+            </div>
           </li>
           <li>
-              <div class="beer">
-                <img
-                  src="../images/제주거멍에일500.png"
-                  alt="제주거멍에일500"
-                />
-              </div>
+            <div class="beer">
+              <img src="../images/제주거멍에일500.png" alt="제주거멍에일500" />
+            </div>
           </li>
           <li>
-              <div class="beer">
-                <img src="../images/제주라거500 1.png" alt="제주라거500" />
-              </div>
+            <div class="beer">
+              <img src="../images/제주라거500 1.png" alt="제주라거500" />
+            </div>
           </li>
         </ul>
       </div>
@@ -67,7 +66,7 @@
     <div class="product jeju">
       <div class="banner02">
         <img src="../images/main/제주비어 배너.png" alt="제주비어" />
-        <img src="../images/shop/jeju.png" alt="jeju">
+        <img src="../images/shop/jeju.png" alt="jeju" />
       </div>
       <div class="jeju_item">
         <img src="../images/jejubeer_01.png" alt="jejubeer_01" />
@@ -89,7 +88,7 @@
     <div class="product pellong">
       <div class="banner02">
         <img src="../images/main/제주펠롱에일 배너.png" alt="제주비어" />
-      <img src="../images/shop/pellong.png" alt="">
+        <img src="../images/shop/pellong.png" alt="" />
       </div>
       <div class="jeju_item">
         <img src="../images/shop/pellong500.png" alt="pellong500" />
@@ -111,7 +110,7 @@
     <div class="product gumung">
       <div class="banner02">
         <img src="../images/main/제주거멍에일 배너.png" alt="제주비어" />
-        <img src="../images/shop/gumung.png" alt="gumung">
+        <img src="../images/shop/gumung.png" alt="gumung" />
       </div>
       <div class="jeju_item">
         <img src="../images/shop/gumung500.png" alt="gumung500" />
@@ -155,7 +154,31 @@
     </div>
 
     <footer class="content"></footer>
+
+    <a href="#x" class="gotop"><i class="xi-angle-up"></i></a>
   </body>
+
+  <script>
+    $('a').attr('href', './product.html');
+    $('a.gotop').attr('href', '');
+  </script>
+
+  <script>
+    // gotop
+    $(window).scroll(function () {
+      var scrollValue = $(document).scrollTop();
+
+      if (scrollValue > 300) {
+        $('.gotop').fadeIn();
+      } else {
+        $('.gotop').fadeOut();
+      }
+    });
+
+    $('.gotop').on('click', function () {
+      $('html,body').animate({ scrollTop: 0 });
+    });
+  </script>
 
   <script>
     $('header').load('../inc/header.html');
@@ -163,39 +186,39 @@
   </script>
 
   <script>
- $('.banner02').slick({
+    $('.banner02').slick({
       autoplay: true,
       autoplaySpeed: 2000,
     });
   </script>
 
-<script>
-  $(function () {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(function (position) {
-        var latitude = position.coords.latitude;
-        var longitude = position.coords.longitude;
+  <script>
+    $(function () {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function (position) {
+          var latitude = position.coords.latitude;
+          var longitude = position.coords.longitude;
 
-        // console.log(latitude);
-        // console.log('a');
+          // console.log(latitude);
+          // console.log('a');
 
-        // OpenCage Geocoding API를 사용하여 위치를 가져옴
-        var apiKey = '463e992eee534ec0aae39e00ac154464';
-        var apiUrl = `https://api.opencagedata.com/geocode/v1/json?q=${latitude}+${longitude}&key=${apiKey}`;
+          // OpenCage Geocoding API를 사용하여 위치를 가져옴
+          var apiKey = '463e992eee534ec0aae39e00ac154464';
+          var apiUrl = `https://api.opencagedata.com/geocode/v1/json?q=${latitude}+${longitude}&key=${apiKey}`;
 
-        fetch(apiUrl)
-          .then((response) => response.json())
-          .then((data) => {
-            var city = data.results[0].components.city;
-            document.getElementById('city').innerText = city;
-          })
-          .catch((error) => console.error('Error:', error));
-      });
-    } else {
-      // 위치 정보를 가져올 수 없는 경우의 처리
-      document.getElementById('city').innerText =
-        '위치 정보를 가져올 수 없습니다.';
-    }
-  });
-</script>
+          fetch(apiUrl)
+            .then((response) => response.json())
+            .then((data) => {
+              var city = data.results[0].components.city;
+              document.getElementById('city').innerText = city;
+            })
+            .catch((error) => console.error('Error:', error));
+        });
+      } else {
+        // 위치 정보를 가져올 수 없는 경우의 처리
+        document.getElementById('city').innerText =
+          '위치 정보를 가져올 수 없습니다.';
+      }
+    });
+  </script>
 </html>
