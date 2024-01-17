@@ -44,4 +44,4 @@
 정지은 - jieun.jung0310@gmail.com
 
 project link:
-<https://github.com/Jieun0310/Jieun_website.git>
+[https://github.com/Jieun0310/Jieun_website.git](http://127.0.0.1:5501/pages/main.html)http://127.0.0.1:5501/pages/main.html
